@@ -16,6 +16,12 @@
 		4203231D2BCB944700A5C286 /* NotesAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4203231C2BCB944700A5C286 /* NotesAppTests.swift */; };
 		420323272BCB944700A5C286 /* NotesAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420323262BCB944700A5C286 /* NotesAppUITests.swift */; };
 		420323292BCB944700A5C286 /* NotesAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420323282BCB944700A5C286 /* NotesAppUITestsLaunchTests.swift */; };
+		420323372BCB98F100A5C286 /* Note+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420323362BCB98F100A5C286 /* Note+Helper.swift */; };
+		420323392BCC345600A5C286 /* NoteDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420323382BCC345600A5C286 /* NoteDetailView.swift */; };
+		4203233C2BCC39D300A5C286 /* NSPredicate+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4203233B2BCC39D300A5C286 /* NSPredicate+Helper.swift */; };
+		4203233E2BD207B600A5C286 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4203233D2BD207B600A5C286 /* Status.swift */; };
+		420323412BD212EF00A5C286 /* TextViewiOSWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420323402BD212EE00A5C286 /* TextViewiOSWrapper.swift */; platformFilter = ios; };
+		420323432BD2234800A5C286 /* TextViewMacOSWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420323422BD2234800A5C286 /* TextViewMacOSWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,12 @@
 		420323222BCB944700A5C286 /* NotesAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotesAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		420323262BCB944700A5C286 /* NotesAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesAppUITests.swift; sourceTree = "<group>"; };
 		420323282BCB944700A5C286 /* NotesAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		420323362BCB98F100A5C286 /* Note+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+Helper.swift"; sourceTree = "<group>"; };
+		420323382BCC345600A5C286 /* NoteDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailView.swift; sourceTree = "<group>"; };
+		4203233B2BCC39D300A5C286 /* NSPredicate+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPredicate+Helper.swift"; sourceTree = "<group>"; };
+		4203233D2BD207B600A5C286 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		420323402BD212EE00A5C286 /* TextViewiOSWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewiOSWrapper.swift; sourceTree = "<group>"; };
+		420323422BD2234800A5C286 /* TextViewMacOSWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewMacOSWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +111,10 @@
 		420323042BCB944500A5C286 /* NotesApp */ = {
 			isa = PBXGroup;
 			children = (
+				4203233F2BD212C400A5C286 /* View */,
+				4203233A2BCC391300A5C286 /* CoreData+Helper */,
+				420323352BCB98DA00A5C286 /* Models */,
 				420323052BCB944500A5C286 /* NotesAppApp.swift */,
-				420323072BCB944500A5C286 /* Persistence.swift */,
 				4203230C2BCB944500A5C286 /* ContentView.swift */,
 				4203230E2BCB944700A5C286 /* Assets.xcassets */,
 				420323102BCB944700A5C286 /* NotesApp.entitlements */,
@@ -133,6 +147,34 @@
 				420323282BCB944700A5C286 /* NotesAppUITestsLaunchTests.swift */,
 			);
 			path = NotesAppUITests;
+			sourceTree = "<group>";
+		};
+		420323352BCB98DA00A5C286 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				420323362BCB98F100A5C286 /* Note+Helper.swift */,
+				4203233D2BD207B600A5C286 /* Status.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4203233A2BCC391300A5C286 /* CoreData+Helper */ = {
+			isa = PBXGroup;
+			children = (
+				420323072BCB944500A5C286 /* Persistence.swift */,
+				4203233B2BCC39D300A5C286 /* NSPredicate+Helper.swift */,
+			);
+			path = "CoreData+Helper";
+			sourceTree = "<group>";
+		};
+		4203233F2BD212C400A5C286 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				420323382BCC345600A5C286 /* NoteDetailView.swift */,
+				420323402BD212EE00A5C286 /* TextViewiOSWrapper.swift */,
+				420323422BD2234800A5C286 /* TextViewMacOSWrapper.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +309,12 @@
 			files = (
 				4203230B2BCB944500A5C286 /* NotesApp.xcdatamodeld in Sources */,
 				420323062BCB944500A5C286 /* NotesAppApp.swift in Sources */,
+				420323412BD212EF00A5C286 /* TextViewiOSWrapper.swift in Sources */,
+				420323372BCB98F100A5C286 /* Note+Helper.swift in Sources */,
+				4203233E2BD207B600A5C286 /* Status.swift in Sources */,
+				4203233C2BCC39D300A5C286 /* NSPredicate+Helper.swift in Sources */,
+				420323392BCC345600A5C286 /* NoteDetailView.swift in Sources */,
+				420323432BD2234800A5C286 /* TextViewMacOSWrapper.swift in Sources */,
 				4203230D2BCB944500A5C286 /* ContentView.swift in Sources */,
 				420323082BCB944500A5C286 /* Persistence.swift in Sources */,
 			);
@@ -425,6 +473,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = NotesApp/NotesApp.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NotesApp/Preview Content\"";
@@ -442,10 +491,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sareenv.NotesApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -463,6 +512,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = NotesApp/NotesApp.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NotesApp/Preview Content\"";
@@ -480,10 +530,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sareenv.NotesApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
